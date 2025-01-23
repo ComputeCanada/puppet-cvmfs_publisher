@@ -14,19 +14,18 @@ type PublisherConfiguration = Struct[
 class cvmfs_publisher (
   Hash[String, PublisherConfiguration] $repositories,
 ) {
-  ensure_package( 'cvmfs-repo', {     
+  ensure_packages( { 'cvmfs-repo' => {
       ensure   => 'installed',
       provider => 'rpm',
       name     => 'cvmfs-release-3-2.noarch',
       source   => 'https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-3-2.noarch.rpm',
-    }
+    } }
   )
-  ensure_package( 'cvmfs', {
+  ensure_packages( { 'cvmfs' => {
       ensure  => 'installed',
       require => [Package['cvmfs-repo']],
-    }
+    } }
   )
-  ensure_resource( 'file', '/cvmfs', { ensure => directory, seltype => 'root_t' } )
 
   package { 'cvmfs-server':
     ensure  => 'installed',
