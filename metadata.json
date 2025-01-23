@@ -1,0 +1,13 @@
+{
+    "name": "puppet-cvmfs_publisher",
+    "version": "0.1",
+    "author": "Maxime Boissonneault",
+    "summary": "Install and configure a CVMFS publisher node with the Gateway interface",
+    "license": "MIT",
+    "source": "https://github.com/computecanada/puppet-cvmfs_publisher",
+    "project_page": "https://github.com/computecanada/puppet-cvmfs_publisher",
+    "issues_url": "https://github.com/computecanada/puppet-cvmfs_publisher/issues",
+    "dependencies": [ 
+        { "name":"puppetlabs/stdlib", "version_requirement": ">= 5.2.0"  }
+    ]
+}

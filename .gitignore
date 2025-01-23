@@ -1,0 +1,14 @@
+# Ignore all
+*
+
+# Unignore all dirs
+!*/
+
+# Unignore some extensions
+!*.pp
+!*.json
+!*.yaml
+!*.md
+
+# Unignore specific files
+!.gitignore
